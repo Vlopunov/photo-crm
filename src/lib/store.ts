@@ -23,16 +23,21 @@ function uid() {
 // ─── Seed data ───
 
 const DEFAULT_SERVICES: Service[] = [
-  // Фото
-  { id: uid(), name: 'Портретная съёмка', price: 150, duration_minutes: 60, points_earned: 50, is_active: true },
-  { id: uid(), name: 'Семейная съёмка', price: 250, duration_minutes: 90, points_earned: 80, is_active: true },
-  { id: uid(), name: 'Детская съёмка', price: 180, duration_minutes: 60, points_earned: 60, is_active: true },
+  // 📸 Аренда залов для съёмки
+  { id: uid(), name: 'Зал «Кристалл» — аренда', price: 70, duration_minutes: 60, points_earned: 20, is_active: true },
+  { id: uid(), name: 'Зал «Графит» — аренда', price: 70, duration_minutes: 60, points_earned: 20, is_active: true },
+  { id: uid(), name: 'Зал «Милена» — аренда', price: 80, duration_minutes: 60, points_earned: 25, is_active: true },
+  // 📸 Фотосъёмка с фотографом
+  { id: uid(), name: 'Фотосессия с фотографом', price: 175, duration_minutes: 60, points_earned: 50, is_active: true },
+  { id: uid(), name: 'Семейная фотосессия', price: 250, duration_minutes: 90, points_earned: 80, is_active: true },
+  { id: uid(), name: 'Детская фотосессия', price: 200, duration_minutes: 60, points_earned: 60, is_active: true },
   { id: uid(), name: 'Love Story', price: 200, duration_minutes: 90, points_earned: 70, is_active: true },
-  { id: uid(), name: 'Фото на документы', price: 30, duration_minutes: 30, points_earned: 10, is_active: true },
-  // Moloko Event
-  { id: uid(), name: 'Аренда зала для праздника', price: 100, duration_minutes: 120, points_earned: 40, is_active: true },
-  { id: uid(), name: 'Аренда зала для встречи', price: 60, duration_minutes: 60, points_earned: 20, is_active: true },
-  { id: uid(), name: 'Детский праздник под ключ', price: 350, duration_minutes: 180, points_earned: 100, is_active: true },
+  // 💄 Допуслуги
+  { id: uid(), name: 'Макияж и причёска', price: 70, duration_minutes: 60, points_earned: 15, is_active: true },
+  // 🎉 Moloko Event
+  { id: uid(), name: 'Аренда зала для праздника', price: 100, duration_minutes: 120, points_earned: 30, is_active: true },
+  { id: uid(), name: 'Детский день рождения', price: 350, duration_minutes: 180, points_earned: 100, is_active: true },
+  { id: uid(), name: 'Аренда пространства для встречи', price: 70, duration_minutes: 60, points_earned: 20, is_active: true },
 ];
 
 const DEFAULT_SCHEDULE: ScheduleSetting[] = [

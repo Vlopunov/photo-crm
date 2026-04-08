@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { format } from 'date-fns';
 import { ru } from 'date-fns/locale';
 import { Service } from '@/lib/types';
-import { User, Phone, Mail, MessageSquare, Sparkles, Check } from 'lucide-react';
+import { User, Phone, Mail, MessageSquare, Sparkles } from 'lucide-react';
 
 interface BookingFormProps {
   selectedDate: Date;
@@ -19,9 +19,7 @@ interface BookingFormProps {
 export default function BookingForm({
   selectedDate,
   selectedSlot,
-  services,
   selectedService,
-  onSelectService,
   onSubmit,
   isSubmitting,
 }: BookingFormProps) {
@@ -38,6 +36,7 @@ export default function BookingForm({
 
   return (
     <form onSubmit={handleSubmit} className="bg-card rounded-2xl border border-border p-6 shadow-sm space-y-5">
+      {/* Booking summary */}
       <div className="flex items-center gap-3 pb-4 border-b border-border">
         <div className="w-10 h-10 rounded-xl bg-moloko-100 flex items-center justify-center">
           <Sparkles className="w-5 h-5 text-accent" />
@@ -50,37 +49,15 @@ export default function BookingForm({
         </div>
       </div>
 
-      {/* Service selection */}
-      <div>
-        <label className="text-sm font-medium text-muted mb-2 block">Услуга</label>
-        <div className="grid gap-2">
-          {services.map(s => (
-            <button
-              key={s.id}
-              type="button"
-              onClick={() => onSelectService(s)}
-              className={`
-                flex items-center justify-between p-3 rounded-xl border text-left transition-all
-                ${selectedService?.id === s.id
-                  ? 'border-accent bg-moloko-50 ring-1 ring-accent/20'
-                  : 'border-border hover:border-stone-300'
-                }
-              `}
-            >
-              <div>
-                <p className="font-medium text-sm">{s.name}</p>
-                <p className="text-xs text-muted">{s.duration_minutes} мин</p>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-sm font-semibold">{s.price.toLocaleString('ru')} BYN</span>
-                {selectedService?.id === s.id && (
-                  <Check className="w-4 h-4 text-accent" />
-                )}
-              </div>
-            </button>
-          ))}
+      {selectedService && (
+        <div className="flex items-center justify-between p-3 rounded-xl bg-moloko-50 border border-moloko-100">
+          <div>
+            <p className="font-medium text-sm">{selectedService.name}</p>
+            <p className="text-xs text-muted">{selectedService.duration_minutes} мин</p>
+          </div>
+          <span className="text-sm font-bold">{selectedService.price} BYN</span>
         </div>
-      </div>
+      )}
 
       {/* Client info */}
       <div className="space-y-3">
@@ -136,7 +113,7 @@ export default function BookingForm({
               value={notes}
               onChange={e => setNotes(e.target.value)}
               rows={3}
-              placeholder="Расскажите о ваших пожеланиях..."
+              placeholder="Количество гостей, пожелания по декору..."
               className="w-full pl-10 pr-4 py-2.5 bg-stone-50 border border-border rounded-xl text-sm transition-colors resize-none"
             />
           </div>
