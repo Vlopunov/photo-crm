@@ -39,7 +39,7 @@ export default function BookingForm({
   return (
     <form onSubmit={handleSubmit} className="bg-card rounded-2xl border border-border p-6 shadow-sm space-y-5">
       <div className="flex items-center gap-3 pb-4 border-b border-border">
-        <div className="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center">
+        <div className="w-10 h-10 rounded-xl bg-moloko-100 flex items-center justify-center">
           <Sparkles className="w-5 h-5 text-accent" />
         </div>
         <div>
@@ -62,7 +62,7 @@ export default function BookingForm({
               className={`
                 flex items-center justify-between p-3 rounded-xl border text-left transition-all
                 ${selectedService?.id === s.id
-                  ? 'border-accent bg-amber-50 ring-1 ring-accent/20'
+                  ? 'border-accent bg-moloko-50 ring-1 ring-accent/20'
                   : 'border-border hover:border-stone-300'
                 }
               `}
@@ -146,7 +146,7 @@ export default function BookingForm({
       <button
         type="submit"
         disabled={!name || !phone || !selectedService || isSubmitting}
-        className="w-full py-3 bg-accent text-white font-semibold rounded-xl hover:bg-amber-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed shadow-md shadow-amber-900/10"
+        className="w-full py-3 bg-accent text-white font-semibold rounded-xl hover:bg-accent-dark transition-colors disabled:opacity-50 disabled:cursor-not-allowed shadow-md shadow-stone-900/10"
       >
         {isSubmitting ? 'Бронируем...' : 'Забронировать'}
       </button>

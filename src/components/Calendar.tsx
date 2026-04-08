@@ -75,7 +75,7 @@ export default function Calendar({ selectedDate, onSelectDate, availableDays }: 
               className={`
                 relative aspect-square flex items-center justify-center text-sm rounded-xl transition-all
                 ${!inMonth ? 'text-stone-300' : ''}
-                ${isAvailable ? 'hover:bg-amber-50 cursor-pointer font-medium' : 'text-stone-300 cursor-default'}
+                ${isAvailable ? 'hover:bg-moloko-50 cursor-pointer font-medium' : 'text-stone-300 cursor-default'}
                 ${isSelected ? 'bg-accent text-white hover:bg-accent font-semibold !text-white' : ''}
                 ${isTodayDate && !isSelected ? 'ring-2 ring-accent/30' : ''}
               `}

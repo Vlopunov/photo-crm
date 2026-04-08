@@ -14,7 +14,7 @@ import { getBookings, getClients, getServices, updateBookingStatus, updateClient
 type Tab = 'dashboard' | 'bookings' | 'clients' | 'loyalty';
 
 const STATUS_CONFIG = {
-  pending: { label: 'Ожидает', color: 'bg-amber-100 text-amber-800', icon: AlertCircle },
+  pending: { label: 'Ожидает', color: 'bg-moloko-100 text-moloko-800', icon: AlertCircle },
   confirmed: { label: 'Подтверждена', color: 'bg-blue-100 text-blue-800', icon: Clock },
   completed: { label: 'Завершена', color: 'bg-emerald-100 text-emerald-800', icon: CheckCircle },
   cancelled: { label: 'Отменена', color: 'bg-red-100 text-red-800', icon: XCircle },
@@ -85,7 +85,7 @@ export default function AdminPage() {
               <Camera className="w-4 h-4 text-accent-light" />
             </div>
             <div>
-              <h1 className="font-bold text-base tracking-tight">LUMOS CRM</h1>
+              <h1 className="font-bold text-base tracking-tight">MOLOKO CRM</h1>
               <p className="text-[10px] text-muted -mt-0.5">панель управления</p>
             </div>
           </div>
@@ -132,8 +132,8 @@ export default function AdminPage() {
               <StatCard
                 title="Ожидают подтверждения"
                 value={pendingBookings.length}
-                icon={<AlertCircle className="w-5 h-5 text-amber-600" />}
-                bg="bg-amber-50"
+                icon={<AlertCircle className="w-5 h-5 text-accent" />}
+                bg="bg-moloko-50"
               />
               <StatCard
                 title="Выручка"
@@ -153,12 +153,12 @@ export default function AdminPage() {
             {pendingBookings.length > 0 && (
               <div className="bg-card rounded-2xl border border-border p-5 shadow-sm">
                 <h3 className="font-semibold mb-4 flex items-center gap-2">
-                  <AlertCircle className="w-4 h-4 text-amber-600" />
+                  <AlertCircle className="w-4 h-4 text-accent" />
                   Новые записи ({pendingBookings.length})
                 </h3>
                 <div className="space-y-3">
                   {pendingBookings.slice(0, 5).map(b => (
-                    <div key={b.id} className="flex items-center justify-between p-3 bg-amber-50/50 rounded-xl border border-amber-100">
+                    <div key={b.id} className="flex items-center justify-between p-3 bg-moloko-50/50 rounded-xl border border-moloko-100">
                       <div>
                         <p className="font-medium text-sm">{b.client?.name || 'Клиент'}</p>
                         <p className="text-xs text-muted">
@@ -306,7 +306,7 @@ export default function AdminPage() {
                       key={c.id}
                       onClick={() => setSelectedClient(c)}
                       className={`w-full text-left p-4 hover:bg-stone-50/50 transition-colors flex items-center justify-between ${
-                        selectedClient?.id === c.id ? 'bg-amber-50/50' : ''
+                        selectedClient?.id === c.id ? 'bg-moloko-50/50' : ''
                       }`}
                     >
                       <div className="flex items-center gap-3">
@@ -353,7 +353,7 @@ export default function AdminPage() {
                   </div>
 
                   <div className="grid grid-cols-2 gap-3 mb-5">
-                    <div className="bg-amber-50 rounded-xl p-3 text-center">
+                    <div className="bg-moloko-50 rounded-xl p-3 text-center">
                       <p className="text-lg font-bold text-accent">{selectedClient.loyalty_points}</p>
                       <p className="text-[10px] text-muted">баллов</p>
                     </div>
@@ -420,8 +420,8 @@ export default function AdminPage() {
               <StatCard
                 title="Всего баллов выдано"
                 value={totalPoints}
-                icon={<Star className="w-5 h-5 text-amber-600" />}
-                bg="bg-amber-50"
+                icon={<Star className="w-5 h-5 text-accent" />}
+                bg="bg-moloko-50"
               />
               <StatCard
                 title="Активных клиентов"
@@ -450,7 +450,7 @@ export default function AdminPage() {
                     .map((c, i) => {
                       const tier = c.loyalty_points >= 500 ? 'gold' : c.loyalty_points >= 200 ? 'silver' : 'bronze';
                       const tierConfig = {
-                        gold: { label: 'Gold', color: 'bg-amber-100 text-amber-800', ring: 'ring-amber-300' },
+                        gold: { label: 'Gold', color: 'bg-moloko-100 text-moloko-800', ring: 'ring-accent-light' },
                         silver: { label: 'Silver', color: 'bg-stone-200 text-stone-700', ring: 'ring-stone-300' },
                         bronze: { label: 'Bronze', color: 'bg-orange-100 text-orange-800', ring: 'ring-orange-300' },
                       };
@@ -495,9 +495,9 @@ export default function AdminPage() {
                   <p className="text-xs text-stone-600">200 — 499 баллов</p>
                   <p className="text-xs text-muted mt-2">Скидка 5% на все услуги</p>
                 </div>
-                <div className="p-4 rounded-xl bg-amber-50 border border-amber-200">
-                  <p className="text-sm font-semibold text-amber-800 mb-1">Gold</p>
-                  <p className="text-xs text-amber-700">500+ баллов</p>
+                <div className="p-4 rounded-xl bg-moloko-50 border border-moloko-200">
+                  <p className="text-sm font-semibold text-moloko-800 mb-1">Gold</p>
+                  <p className="text-xs text-accent-dark">500+ баллов</p>
                   <p className="text-xs text-muted mt-2">Скидка 10% + приоритет записи</p>
                 </div>
               </div>

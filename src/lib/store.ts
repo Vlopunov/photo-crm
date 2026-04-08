@@ -23,13 +23,16 @@ function uid() {
 // ─── Seed data ───
 
 const DEFAULT_SERVICES: Service[] = [
+  // Фото
   { id: uid(), name: 'Портретная съёмка', price: 150, duration_minutes: 60, points_earned: 50, is_active: true },
   { id: uid(), name: 'Семейная съёмка', price: 250, duration_minutes: 90, points_earned: 80, is_active: true },
-  { id: uid(), name: 'Предметная съёмка', price: 90, duration_minutes: 30, points_earned: 30, is_active: true },
-  { id: uid(), name: 'Фото на документы', price: 30, duration_minutes: 30, points_earned: 10, is_active: true },
-  { id: uid(), name: 'Студийная аренда', price: 60, duration_minutes: 60, points_earned: 20, is_active: true },
-  { id: uid(), name: 'Love Story', price: 200, duration_minutes: 90, points_earned: 70, is_active: true },
   { id: uid(), name: 'Детская съёмка', price: 180, duration_minutes: 60, points_earned: 60, is_active: true },
+  { id: uid(), name: 'Love Story', price: 200, duration_minutes: 90, points_earned: 70, is_active: true },
+  { id: uid(), name: 'Фото на документы', price: 30, duration_minutes: 30, points_earned: 10, is_active: true },
+  // Moloko Event
+  { id: uid(), name: 'Аренда зала для праздника', price: 100, duration_minutes: 120, points_earned: 40, is_active: true },
+  { id: uid(), name: 'Аренда зала для встречи', price: 60, duration_minutes: 60, points_earned: 20, is_active: true },
+  { id: uid(), name: 'Детский праздник под ключ', price: 350, duration_minutes: 180, points_earned: 100, is_active: true },
 ];
 
 const DEFAULT_SCHEDULE: ScheduleSetting[] = [

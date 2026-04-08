@@ -145,7 +145,7 @@ export default function BookingPage() {
               setSelectedService(null);
               setStep('calendar');
             }}
-            className="px-6 py-2.5 bg-accent text-white font-medium rounded-xl hover:bg-amber-800 transition-colors"
+            className="px-6 py-2.5 bg-accent text-white font-medium rounded-xl hover:bg-accent-dark transition-colors"
           >
             Записаться ещё
           </button>
@@ -164,8 +164,8 @@ export default function BookingPage() {
               <Camera className="w-5 h-5 text-accent-light" />
             </div>
             <div>
-              <h1 className="font-bold text-lg tracking-tight">LUMOS</h1>
-              <p className="text-xs text-muted -mt-0.5">фотостудия</p>
+              <h1 className="font-bold text-lg tracking-tight">MOLOKO</h1>
+              <p className="text-xs text-muted -mt-0.5">фотостудия & ивенты</p>
             </div>
           </div>
           <a
@@ -181,8 +181,8 @@ export default function BookingPage() {
       <main className="max-w-6xl mx-auto px-4 py-8">
         {/* Hero */}
         <div className="text-center mb-10">
-          <h2 className="text-3xl font-bold tracking-tight mb-2">Запись на фотосессию</h2>
-          <p className="text-muted">Выберите удобную дату и время — мы подготовим всё для вас</p>
+          <h2 className="text-3xl font-bold tracking-tight mb-2">Запись в студию MOLOKO</h2>
+          <p className="text-muted">Фотосессии и мероприятия в уютном пространстве Минска</p>
         </div>
 
         {/* Steps indicator */}
@@ -215,7 +215,7 @@ export default function BookingPage() {
               {selectedSlot && (
                 <button
                   onClick={handleProceedToForm}
-                  className="w-full py-3 bg-accent text-white font-semibold rounded-xl hover:bg-amber-800 transition-colors shadow-md shadow-amber-900/10"
+                  className="w-full py-3 bg-accent text-white font-semibold rounded-xl hover:bg-accent-dark transition-colors shadow-md shadow-stone-900/10"
                 >
                   Продолжить
                 </button>
@@ -247,7 +247,7 @@ export default function BookingPage() {
       {/* Footer */}
       <footer className="border-t border-border mt-auto py-6">
         <div className="max-w-6xl mx-auto px-4 text-center text-xs text-muted">
-          LUMOS Studio — {new Date().getFullYear()}
+          MOLOKO Studio — Минск, {new Date().getFullYear()}
         </div>
       </footer>
     </div>

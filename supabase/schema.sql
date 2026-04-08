@@ -67,13 +67,16 @@ INSERT INTO schedule_settings (day_of_week, start_time, end_time, is_available) 
 
 -- Seed: default services
 INSERT INTO services (name, price, duration_minutes, points_earned) VALUES
+  -- Фото
   ('Портретная съёмка', 150, 60, 50),
   ('Семейная съёмка', 250, 90, 80),
-  ('Предметная съёмка', 90, 30, 30),
-  ('Фотосессия для документов', 30, 30, 10),
-  ('Студийная аренда', 60, 60, 20),
+  ('Детская съёмка', 180, 60, 60),
   ('Love Story', 200, 90, 70),
-  ('Детская съёмка', 180, 60, 60);
+  ('Фото на документы', 30, 30, 10),
+  -- Moloko Event
+  ('Аренда зала для праздника', 100, 120, 40),
+  ('Аренда зала для встречи', 60, 60, 20),
+  ('Детский праздник под ключ', 350, 180, 100);
 
 -- Row Level Security
 ALTER TABLE clients ENABLE ROW LEVEL SECURITY;

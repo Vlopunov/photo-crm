@@ -42,8 +42,8 @@ export default function TimeSlots({ slots, bookedSlots, selectedSlot, onSelectSl
                   ${isBooked
                     ? 'bg-stone-100 text-stone-400 border-stone-200 cursor-not-allowed line-through'
                     : isSelected
-                      ? 'bg-accent text-white border-accent shadow-md shadow-amber-900/10'
-                      : 'bg-card text-foreground border-border hover:border-accent/50 hover:bg-amber-50 cursor-pointer'
+                      ? 'bg-accent text-white border-accent shadow-md shadow-stone-900/10'
+                      : 'bg-card text-foreground border-border hover:border-accent/50 hover:bg-moloko-50 cursor-pointer'
                   }
                 `}
               >
