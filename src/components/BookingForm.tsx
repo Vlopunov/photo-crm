@@ -72,7 +72,7 @@ export default function BookingForm({
                 <p className="text-xs text-muted">{s.duration_minutes} мин</p>
               </div>
               <div className="flex items-center gap-2">
-                <span className="text-sm font-semibold">{s.price.toLocaleString('ru')} ₽</span>
+                <span className="text-sm font-semibold">{s.price.toLocaleString('ru')} BYN</span>
                 {selectedService?.id === s.id && (
                   <Check className="w-4 h-4 text-accent" />
                 )}
@@ -108,7 +108,7 @@ export default function BookingForm({
               value={phone}
               onChange={e => setPhone(e.target.value)}
               required
-              placeholder="+7 (900) 123-45-67"
+              placeholder="+375 (29) 123-45-67"
               className="w-full pl-10 pr-4 py-2.5 bg-stone-50 border border-border rounded-xl text-sm transition-colors"
             />
           </div>

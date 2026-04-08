@@ -67,13 +67,13 @@ INSERT INTO schedule_settings (day_of_week, start_time, end_time, is_available) 
 
 -- Seed: default services
 INSERT INTO services (name, price, duration_minutes, points_earned) VALUES
-  ('Портретная съёмка', 5000, 60, 50),
-  ('Семейная съёмка', 8000, 90, 80),
-  ('Предметная съёмка', 3000, 30, 30),
-  ('Фотосессия для документов', 1000, 30, 10),
-  ('Студийная аренда', 2000, 60, 20),
-  ('Love Story', 7000, 90, 70),
-  ('Детская съёмка', 6000, 60, 60);
+  ('Портретная съёмка', 150, 60, 50),
+  ('Семейная съёмка', 250, 90, 80),
+  ('Предметная съёмка', 90, 30, 30),
+  ('Фотосессия для документов', 30, 30, 10),
+  ('Студийная аренда', 60, 60, 20),
+  ('Love Story', 200, 90, 70),
+  ('Детская съёмка', 180, 60, 60);
 
 -- Row Level Security
 ALTER TABLE clients ENABLE ROW LEVEL SECURITY;

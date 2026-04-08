@@ -137,7 +137,7 @@ export default function AdminPage() {
               />
               <StatCard
                 title="Выручка"
-                value={`${(totalRevenue / 1000).toFixed(0)}K ₽`}
+                value={`${totalRevenue} BYN`}
                 icon={<TrendingUp className="w-5 h-5 text-emerald-600" />}
                 bg="bg-emerald-50"
               />

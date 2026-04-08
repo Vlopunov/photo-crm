@@ -132,7 +132,7 @@ export default function BookingPage() {
             {selectedDate && format(selectedDate, 'd MMMM', { locale: undefined })} в {selectedSlot}
           </p>
           <p className="text-muted text-sm mb-6">
-            {selectedService?.name} — {selectedService?.price.toLocaleString('ru')} ₽
+            {selectedService?.name} — {selectedService?.price.toLocaleString('ru')} BYN
           </p>
           <p className="text-xs text-muted mb-6">
             Мы свяжемся с вами для подтверждения записи
